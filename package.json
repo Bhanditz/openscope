@@ -15,7 +15,9 @@
     "coveralls": "nyc report -r text-lcov | coveralls",
     "lint": "eslint src/**; exit 0",
     "start": "nodemon --watch public/assets/scripts/ ./public/assets/scripts/server/index.js",
-    "server": "npm run start"
+    "server": "npm run start",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -80,10 +82,11 @@
     "coveralls": "^2.11.16",
     "express": "^4.14.0",
     "gulp-util": "^3.0.7",
-    "jquery": "^3.1.0",
+    "jquery": "^3.5.0",
     "lodash": "^4.15.0",
     "mkdirp": "^0.5.1",
-    "raf": "^3.3.0"
+    "raf": "^3.3.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "ava": "^0.16.0",
@@ -133,5 +136,6 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^6.6.0"
-  }
+  },
+  "snyk": true
 }
